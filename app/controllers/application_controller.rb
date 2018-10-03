@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   def require_login
     if session[:name].nil? || session[:name].empty?
       redirect_to login_path
+      return
     end
   end
 end
