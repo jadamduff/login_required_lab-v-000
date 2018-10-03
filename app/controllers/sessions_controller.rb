@@ -5,8 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     session[:name] = params[:name]
-    require_login
-    redirect_to root_path
+    require_login || redirect_to root_path
   end
 
   def destroy
