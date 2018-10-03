@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  def index
+  end
+
   def current_user
     session[:username]
   end
