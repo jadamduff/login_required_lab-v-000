@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :require_login
 
+  before_action :require_login, only: [:index]
+
   def index
   end
 
