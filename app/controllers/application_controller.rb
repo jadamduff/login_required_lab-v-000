@@ -16,5 +16,3 @@ class ApplicationController < ActionController::Base
     return head(:forbidden) unless session.include? :name
   end
 end
-
-
