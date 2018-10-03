@@ -11,4 +11,10 @@ class ApplicationController < ActionController::Base
   def current_user
     session[:name]
   end
+
+  def require_login
+    if session[:name].nil? || session[:name].empty?
+      redirect_to login_path
+    end
+  end
 end
