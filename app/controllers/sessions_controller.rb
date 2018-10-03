@@ -1,7 +1,10 @@
 class SessionsController < ApplicationController
 
-  def login
+  def new
+  end
 
+  def create
+    session[:username] = params[:username]
   end
 
 end
